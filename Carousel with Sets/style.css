@@ -44,6 +44,17 @@ body {
   background: linear-gradient(135deg, #111, #222);
 }
 
+.carousel__icon {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.carousel__icon img {
+  width: clamp(60px, 15vw, 110px);
+  filter: invert(1);
+}
+
 .carousel__label {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3rem);
@@ -82,6 +93,16 @@ body {
   padding-top: 1rem;
 }
 
+.project-icon {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+
+.project-icon img {
+  width: clamp(60px, 15vw, 120px);
+  filter: invert(1);
+}
 .carousel__text ul {
   padding-left: 1rem;
   margin: 0;
