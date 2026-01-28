@@ -1,0 +1,100 @@
+:root {
+  --bg: #030303;
+  --fg: #f4f4f4;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--fg);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+.carousel {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.carousel__viewport {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  position: relative;
+  background: #111;
+  min-height: 60vh;
+}
+
+.carousel__slides {
+  display: flex;
+  width: 300%;
+  transition: transform 0.6s ease;
+}
+
+.carousel__slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  min-height: 60vh;
+  background: linear-gradient(135deg, #111, #222);
+}
+
+.carousel__label {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.3em;
+}
+
+.carousel__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.carousel__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.carousel__controls button {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: var(--fg);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+}
+
+.carousel__controls button.active {
+  border-color: #f4f4f4;
+}
+
+.carousel__text {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.carousel__text ul {
+  padding-left: 1rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .carousel {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .carousel__viewport {
+    min-height: 50vh;
+  }
+}

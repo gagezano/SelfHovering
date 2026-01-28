@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel with Sets</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="carousel">
+    <div class="carousel__viewport">
+      <div class="carousel__slides">
+        <div class="carousel__slide" data-set="Set One">
+          <p class="carousel__label">Set One</p>
+          <p>Visible lab, retail, and lounge combos.</p>
+        </div>
+        <div class="carousel__slide" data-set="Set Two">
+          <p class="carousel__label">Set Two</p>
+          <p>Office-first environment with modular fixtures.</p>
+        </div>
+        <div class="carousel__slide" data-set="Set Three">
+          <p class="carousel__label">Set Three</p>
+          <p>Creative studio spaces for collaborative experiments.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel__info">
+      <div class="carousel__controls">
+        <button data-index="0">Set One</button>
+        <button data-index="1">Set Two</button>
+        <button data-index="2">Set Three</button>
+      </div>
+      <div class="carousel__text">
+        <p class="carousel__current"></p>
+        <ul>
+          <li>Dynamic lighting for each zone.</li>
+          <li>Placeholder square footage for quick reference.</li>
+          <li>Responsive architecture cues.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
