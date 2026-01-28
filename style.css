@@ -1,69 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
 
-::root {
+:root {
   font-family: 'SF Pro Display', 'SF Pro Text', 'SF Sans', 'Helvetica Neue', sans-serif;
-  background: #111115;
-  color: #fff;
+  background: #fff;
+  color: #000;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: #111115;
+  background: #fff;
 }
 
 .hero {
-  text-align: center;
-  padding: 5rem 1rem 3rem;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  font-size: clamp(3rem, 6vw, 4rem);
-  margin: 0;
+  text-align: left;
+  padding: 3rem 3vw 0;
 }
 
 .hero__logo {
   width: clamp(180px, 35vw, 260px);
-  margin: 0 auto;
+  margin: 0;
   display: block;
+  filter: brightness(0);
+}
+
+.hero__tagline {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .experiments {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 3rem 3vw 4rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 3vw 4rem;
+}
+
+@media (max-width: 900px) {
+  .experiments {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .experiments {
+    grid-template-columns: 1fr;
+  }
 }
 
 .experiments article {
-  border-radius: 24px;
-  padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: none;
+  background: #e2e0dc;
+  overflow: hidden;
+  transition: background-color 0.2s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease-out;
+}
+
+.experiments article:hover {
+  background: #d6d4d0;
+  transform: scale(1.06);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.experiments__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.experiments__link:hover {
+  color: inherit;
+}
+
+.experiments__preview {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background: #e6e4e0;
+}
+
+.experiments__preview iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+}
+
+.experiments__body {
+  padding: 0.75rem 1rem 1rem;
 }
 
 .experiments h2 {
-  margin-top: 0;
-  font-size: 1.05rem;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.2rem;
+  font-size: 0.9rem;
 }
 
 .experiments p {
-  line-height: 1.6;
-  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.02em;
 }
 
-.experiments a {
-  display: inline-flex;
-  margin-top: 1.5rem;
+.experiments__cta {
+  display: inline-block;
+  margin-top: 0.5rem;
   text-transform: uppercase;
-  font-size: 0.75rem;
-  color: #fefefe;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #000;
   text-decoration: none;
-  border-bottom: 1px solid rgba(254, 254, 254, 0.4);
-  padding-bottom: 0.25rem;
+  background: #a3e635;
+  border-radius: 9999px;
+  padding: 0.3rem 0.65rem;
+  transition: background-color 0.2s ease;
+}
+
+.experiments__cta:hover {
+  background: #84cc16;
 }
