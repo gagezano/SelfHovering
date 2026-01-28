@@ -25,11 +25,10 @@ body {
   margin: 0;
 }
 
-.hero p {
-  margin-top: 1rem;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
+.hero__logo {
+  width: clamp(180px, 35vw, 260px);
+  margin: 0 auto;
+  display: block;
 }
 
 .experiments {
