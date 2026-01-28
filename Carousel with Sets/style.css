@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+
 :root {
   --bg: #030303;
   --fg: #f4f4f4;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'SF Pro Display', 'SF Pro Text', 'SF Sans', 'Helvetica Neue', sans-serif;
   color: var(--fg);
 }
 
@@ -58,7 +60,6 @@ body {
 .carousel__label {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3rem);
-  letter-spacing: 0.3em;
 }
 
 .carousel__info {
@@ -81,7 +82,6 @@ body {
   padding: 0.75rem 1rem;
   text-align: left;
   font-size: 1rem;
-  letter-spacing: 0.2em;
 }
 
 .carousel__controls button.active {
@@ -103,6 +103,7 @@ body {
   width: clamp(60px, 15vw, 120px);
   filter: invert(1);
 }
+
 .carousel__text ul {
   padding-left: 1rem;
   margin: 0;
